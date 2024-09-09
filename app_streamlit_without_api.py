@@ -1,9 +1,11 @@
 import streamlit as st
+import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
 import numpy as np
 import joblib
+nltk.download('punkt')
 
 
 # Conteneur pour le titre et le champ de texte
@@ -11,6 +13,8 @@ title_container = st.container()
 info_container = st.container()
 chat_container = st.container()
 input_container = st.container()
+
+
 
 def preprocess_text(text):
     tokens = word_tokenize(text.lower())

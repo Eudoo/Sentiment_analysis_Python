@@ -9,7 +9,7 @@ nltk.download('punkt')
 nltk.download('stopwords')
 nltk.download('wordnet')
 nltk.download('omw-1.4')  # Pour les données du WordNet Lemmatizer
-
+nltk.download('punkt_tab')
 
 
 # Conteneur pour le titre et le champ de texte

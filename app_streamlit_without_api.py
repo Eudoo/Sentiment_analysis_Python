@@ -87,5 +87,5 @@ def send_message():
 
 # Champ de saisie pour un nouveau message dans le conteneur de saisie
 with input_container:
-    st.text_input("Entrez un message:", key="new_message", on_change=send_message)
+    st.text_input("Enter text here:", key="new_message", on_change=send_message)
 

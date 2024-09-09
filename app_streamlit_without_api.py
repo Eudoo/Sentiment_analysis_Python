@@ -52,7 +52,7 @@ def charger_svc():
     
 # Affichage du titre dans le conteneur
 with title_container:
-    st.title('Welcome to our Sentiment Analysis')
+    st.write('## Welcome to our Sentiment Analysis')
 
 with info_container:
     st.write(''' ###### Please enter your text ..!''')

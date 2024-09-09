@@ -52,10 +52,10 @@ def charger_svc():
     
 # Affichage du titre dans le conteneur
 with title_container:
-    st.title('Analyseur de sentiment')
+    st.title('Welcome to our Sentiment Analysis')
 
 with info_container:
-    st.write(''' ###### Entrez une phrase ou un paragraphe et on vous déduit le sentiment dominant ..!''')
+    st.write(''' ###### Please enter your text ..!''')
 
 
 def send_message():
@@ -72,16 +72,16 @@ def send_message():
         predicted_label_rf = charger_svc().predict([sentence_vector])[0]
 
         # Générer une réponse
-        label = {0: 'Triste', 1: 'Joie', 3: 'Colère', 4: 'Peur'}
+        label = {0: 'Sadness', 1: 'Joy', 3: 'Anger', 4: 'Fear'}
         sentiment = label[predicted_label_rf]
 
         # Générer une réponse (ici, on génère une réponse simple)
         # prediction = '...'
-        response = f"Le sentiment de cette phrase est __{sentiment}__"
+        response = f"The main sentiment in your text is __{sentiment}__"
         # Afficher le message et la réponse dans le conteneur de discussion
         with chat_container:
-            st.write(f''' __Vous__ : {message}''')
-            st.write(f"__Réponse__ : {response}")
+            st.write(f''' __You__ : {message}''')
+            st.write(f"__Result__ : {response}")
         # Réinitialiser le champ de saisie
         st.session_state.new_message = ""
 
